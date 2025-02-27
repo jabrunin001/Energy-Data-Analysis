@@ -1,0 +1,81 @@
+flowchart TD
+    subgraph Data_Sources
+        A1["Energy Consumption Data"]
+        A2["Weather/Temperature Data"]
+        A3["Business Activity Metrics"]
+        A4["Health Records"]
+        A5["Renewable Energy Stats"]
+    end
+
+    subgraph Data_Processing
+        B1["Data Integration"]
+        B2["Feature Engineering"]
+        B3["Temporal Feature Extraction"]
+        B4["Outlier Detection"]
+        B5["Data Normalization"]
+    end
+
+    subgraph Analysis_Models
+        C1["Time Series Forecasting"]
+        C2["Consumption Prediction"]
+        C3["Health Impact Analysis"]
+        C4["Anomaly Detection"]
+        C5["Renewable Optimization"]
+    end
+
+    subgraph Model_Technologies
+        D1["ARIMA & Prophet Models"]
+        D2["Random Forest & Gradient Boosting"]
+        D3["Health Impact Classifier"]
+        D4["Isolation Forest"]
+        D5["Optimization Algorithms"]
+    end
+
+    subgraph Business_Insights
+        E1["Consumption Forecasts"]
+        E2["Peak Load Management"]
+        E3["Health Risk Mitigation"]
+        E4["Anomaly Alert System"]
+        E5["Renewable Energy ROI"]
+    end
+
+    A1 --> B1
+    A2 --> B1
+    A3 --> B1
+    A4 --> B1
+    A5 --> B1
+    
+    B1 --> B2
+    B2 --> B3
+    B3 --> B4
+    B4 --> B5
+    
+    B5 --> C1
+    B5 --> C2
+    B5 --> C3
+    B5 --> C4
+    B5 --> C5
+    
+    C1 --> D1
+    C2 --> D2
+    C3 --> D3
+    C4 --> D4
+    C5 --> D5
+    
+    D1 --> E1
+    D2 --> E2
+    D3 --> E3
+    D4 --> E4
+    D5 --> E5
+
+    classDef datasources fill:#f9f7f7,stroke:#577590,stroke-width:2px
+    classDef processing fill:#f8f9fa,stroke:#2a9d8f,stroke-width:2px
+    classDef models fill:#e9ecef,stroke:#f3722c,stroke-width:2px
+    classDef tech fill:#f1faee,stroke:#264653,stroke-width:2px
+    classDef insights fill:#e6f3f8,stroke:#7209b7,stroke-width:2px
+    
+    class A1,A2,A3,A4,A5 datasources
+    class B1,B2,B3,B4,B5 processing
+    class C1,C2,C3,C4,C5 models
+    class D1,D2,D3,D4,D5 tech
+    class E1,E2,E3,E4,E5 insights
